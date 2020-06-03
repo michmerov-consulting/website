@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michmerov Consulting LLC</title>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Quattrocento"
+	type="text/css" />
+<link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<header class="page-header">
+		<h1>Michmerov Consulting LLC</h1>
+		<p>Serverless technology applied where it makes sense for your
+			business</p>
+	</header>
+	<main>
+
+		<article class="page-body">
+			<section>
+				<h2>How was this site made?</h2>
+				<p>We followed Amazon's documentation, This article will turn
+					into a blow by blow accounting of following those Amazon documents
+					with the intent to give "where's my wallet/purse" confidence to you
+					the reader that cloud sales personnel commonly fail to instill
+					during their pitch.</p>
+				<p>Below is html blockquote, and you'll see these frequently in
+					this document as we review the original Amazon documentation. I
+					hope it flows well on your browser / screenreader, but this article
+					is not about css styling.</p>
+				<blockquote>
+					<p>Web Hosting Amazon S3 hosts static web resources including
+						HTML, CSS, JavaScript, and image files which are loaded in the
+						user's browser.</p>
+					<p>User Management Amazon Cognito provides user management and
+						authentication functions to secure the backend API.</p>
+					<p>Serverless Backend Amazon DynamoDB provides a persistence
+						layer where data can be stored by the API's Lambda function.</p>
+					<p>RESTful API JavaScript executed in the browser sends and
+						receives data from a public backend API built using Lambda and API
+						Gateway.</p>
+					<footer>
+						<a
+							href="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/"><cite>Projects
+								on AWS: Build a Serverless Web Application with AWS Lambda,
+								Amazon API Gateway, Amazon S3, Amazon DynamoDB, and Amazon
+								Cognito</cite></a>
+					</footer>
+				</blockquote>
+			</section>
+			<section>
+				<h2>Commentary on creating a static website</h2>
+				<details>
+					<summary>Amazon Documentation this section is going
+						through...</summary>
+					<blockquote>
+
+						<p>
+							<mark>Web Hosting Amazon S3 hosts static web resources
+								including HTML, CSS, JavaScript, and image files which are
+								loaded in the user's browser.</mark>
+						</p>
+						<p>User Management Amazon Cognito provides user management and
+							authentication functions to secure the backend API.</p>
+						<p>Serverless Backend Amazon DynamoDB provides a persistence
+							layer where data can be stored by the API's Lambda function.</p>
+						<p>RESTful API JavaScript executed in the browser sends and
+							receives data from a public backend API built using Lambda and
+							API Gateway.</p>
+						<footer>
+							<a
+								href="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/"><cite>Projects
+									on AWS: Build a Serverless Web Application with AWS Lambda,
+									Amazon API Gateway, Amazon S3, Amazon DynamoDB, and Amazon
+									Cognito</cite></a>
+						</footer>
+					</blockquote>
+				</details>
+				<p>
+					<q
+						cite="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/">Step
+						1 Select a Region</q> through <q
+						cite="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/">Step
+						4 Add a Bucket Policy to Allow Public Reads</q> &rArr; Smooth. Nothing
+					costs you money until you open the s3 bucket to the public. Even
+					after you open the bucket to the public, no one knows about it and
+					the % chance costs goes over $1 is extremely low. When Amazon's s3
+					bucket console asks you to confirm making the bucket public, feel
+					free to do so with confidence.
+				</p>
+				<p>
+					<q
+						cite="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/">Step
+						5. Enable Website Hosting</q> contains an important 'aside', which
+					most people reading this review will need to follow. I had to in
+					creating this site. I'm referring to the following paragraph:
+				</p>
+				<blockquote>
+					<p>You can also use a custom domain for your website. For
+						example http://www.wildrydes.com is hosted on S3. Setting up a
+						custom domain is not covered in this workshop, but you can find
+						detailed instructions in our documentation.</p>
+					<footer>
+						<a
+							href="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/"><cite>Module
+								1. Static Web Hosting</cite></a>
+					</footer>
+				</blockquote>
+				<p>
+					No one should register http://<i>your-name</i>.<b>s3-website</b>.<i>your-region</i>.<b>amazonaws.com</b>
+					with Google's search engine. If someone did register that url with
+					Google's search engine, then don't worry, no one would shop there.
+					No one would think that url represents a real business.
+				</p><p>The</p>
+			</section>
+		</article>
+
+	</main>
+	<footer class="page-footer"> No servers were harmed in the
+		creation of this website. </footer>
+</body>
+</html>
