@@ -5,8 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Content-Security-Policy"
 	content="default-src 'none'; img-src 'self'; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com; script-src 'self' https://www.google.com https://www.gstatic.com; style-src 'self' https://fonts.googleapis.com; object-src 'none'; frame-src https://www.google.com;">
-
+<meta name="description" content="Serverless technology applied where it makes sense for your
+			business"/>
 <title>Michmerov Consulting LLC</title>
+<!-- this script contains the onLoad we must register with google's recaptcha service -->
+<script async src="js/contact-us.js"></script>
+<!-- this is the recaptcha service, but doesn't do anything yet.  -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- this calls the javascript listed above, with us telling it to render the recaptcha checkbox, and call our main.js/recaptchaReadyOnLoad() when done -->
+<script
+	src="https://www.google.com/recaptcha/api.js?onload=recaptchaReadyOnLoad&render=explicit"
+	async defer></script>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Quattrocento&display=swap"
 	type="text/css" />
@@ -15,23 +24,17 @@
 <body>
 	<header class="page-header">
 		<h1>Michmerov Consulting LLC</h1>
-		<p>Serverless technology applied where it makes sense for your
+		<article><p>Serverless technology applied where it makes sense for your
 			business</p>
+		</article>
+		
 	</header>
 	<main>
 
 		<article class="page-body">
+			
 			<section>
-				<h2>How was this site made?</h2>
-				<p>We followed Amazon's documentation, This article will turn
-					into a blow by blow accounting of following those Amazon documents
-					with the intent to give "where's my wallet/purse" confidence to you
-					the reader that cloud sales personnel commonly fail to instill
-					during their pitch.</p>
-				
-			</section>
-			<section>
-				<h2>Commentary on creating a static website</h2>
+				<h2>Commentary on Creating a Static Website</h2>
 				<details>
 					<summary>Amazon Documentation this section is going
 						through...</summary>
@@ -93,12 +96,23 @@
 					with Google's search engine. If someone did register that url with
 					Google's search engine, then don't worry, no one would shop there.
 					No one would think that url represents a real business.
-				</p><p>The</p>
+				</p>
+				
+			</section>
+			<section>
+				<h2>How was this site made?</h2>
+				<p>We followed Amazon's documentation, This article will turn
+					into a blow by blow accounting of following those Amazon documents
+					with the intent to give "where's my wallet/purse" confidence to you
+					the reader that cloud sales personnel commonly fail to instill
+					during their pitch.</p>
+
 			</section>
 		</article>
 
 	</main>
-	<footer class="page-footer"> <p>No servers were harmed in the
-		creation of this website.</p><p>no cookies were used on this website.</p></footer>
+	<footer class="page-footer">
+		<p>No servers were harmed in the creation of this website. No cookies were used on this website.</p>
+	</footer>
 </body>
 </html>
