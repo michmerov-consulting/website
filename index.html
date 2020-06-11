@@ -11,10 +11,7 @@
 <script async src="js/contact-us.js"></script>
 <!-- this is the recaptcha service, but doesn't do anything yet.  -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<!-- this calls the javascript listed above, with us telling it to render the recaptcha checkbox, and call our main.js/recaptchaReadyOnLoad() when done -->
-<script
-	src="https://www.google.com/recaptcha/api.js?onload=recaptchaReadyOnLoad&render=explicit"
-	async defer></script>
+
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Quattrocento&display=swap"
 	type="text/css" />
@@ -49,7 +46,7 @@
 			<section>
 				<hr>
 				<form id="contact-form"
-					action="my-action"
+					action="https://0xmvip1fq4.execute-api.us-east-1.amazonaws.com/mc/contact-gcs"
 					method="post">
 					<fieldset>
 						
