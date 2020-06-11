@@ -7,8 +7,8 @@
 	function recaptchaReadyOnLoad(){
 		return true;
 	}
-	function enableSubmitAfterRecaptcha(responseToken){
-		submitButton.disabled=false;
+	function onSubmit(responseToken){
+		document.getElementById("contact-form").submit();
 		return true;
 	}
 	function disableSubmit(){

@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Serverless technology applied where it makes sense for your
-			business"/>
+<meta name="description"
+	content="Serverless technology applied where it makes sense for your
+			business" />
 <title>Michmerov Consulting LLC</title>
 <!-- this script contains the onLoad we must register with google's recaptcha service -->
 <script async src="js/contact-us.js"></script>
 <!-- this is the recaptcha service, but doesn't do anything yet.  -->
-<script src="https://www.google.com/recaptcha/api.js" async defer ></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <!-- this calls the javascript listed above, with us telling it to render the recaptcha checkbox, and call our main.js/recaptchaReadyOnLoad() when done -->
 <script
 	src="https://www.google.com/recaptcha/api.js?onload=recaptchaReadyOnLoad&render=explicit"
-	async defer ></script>
+	async defer></script>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans&family=Quattrocento&display=swap"
 	type="text/css" />
@@ -22,95 +23,62 @@
 <body>
 	<header class="page-header">
 		<h1>Michmerov Consulting LLC</h1>
-		<article><p>Serverless technology applied where it makes sense for your
-			business</p>
+		<article>
+			<p>Serverless technology applied where it makes sense for your
+				business</p>
 		</article>
-		
+
 	</header>
 	<main>
 
 		<article class="page-body">
-			
+			<h1>About Us</h1>
+			<p>Michmerov Consulting is a software and business process
+				consulting company.</p>
+			<p>We believe in technology stacks empowering people's ideas.
+				People call us when technology is dictating their ideas to them.</p>
+			<p>We believe in personal references to grow our business, and
+				so, Welcome! We look forward to hearing from you.</p>
 			<section>
-				<h2>Commentary on Creating a Static Website</h2>
-				<details>
-					<summary>Amazon Documentation this section is going
-						through...</summary>
-					<blockquote>
-
-						<p>
-							<mark>Web Hosting Amazon S3 hosts static web resources
-								including HTML, CSS, JavaScript, and image files which are
-								loaded in the user's browser.</mark>
-						</p>
-						<p>User Management Amazon Cognito provides user management and
-							authentication functions to secure the backend API.</p>
-						<p>Serverless Backend Amazon DynamoDB provides a persistence
-							layer where data can be stored by the API's Lambda function.</p>
-						<p>RESTful API JavaScript executed in the browser sends and
-							receives data from a public backend API built using Lambda and
-							API Gateway.</p>
-						<footer>
-							<a
-								href="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/" target="documentation"><cite>Projects
-									on AWS: Build a Serverless Web Application with AWS Lambda,
-									Amazon API Gateway, Amazon S3, Amazon DynamoDB, and Amazon
-									Cognito</cite></a>
-						</footer>
-					</blockquote>
-				</details>
-				<p>
-					<q
-						cite="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/">Step
-						1 Select a Region</q> through <q
-						cite="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/">Step
-						4 Add a Bucket Policy to Allow Public Reads</q> &rArr; Smooth. Nothing
-					costs you money until you open the s3 bucket to the public. Even
-					after you open the bucket to the public, no one knows about it and
-					the % chance costs goes over $1 is extremely low. When Amazon's s3
-					bucket console asks you to confirm making the bucket public, feel
-					free to do so with confidence.
-				</p>
-				<p>
-					<q
-						cite="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/">Step
-						5. Enable Website Hosting</q> contains an important 'aside', which
-					most people reading this review will need to follow. I had to in
-					creating this site. I'm referring to the following paragraph:
-				</p>
-				<blockquote>
-					<p>You can also use a custom domain for your website. For
-						example http://www.wildrydes.com is hosted on S3. Setting up a
-						custom domain is not covered in this workshop, but you can find
-						detailed instructions in our documentation.</p>
-					<footer>
-						<a
-							href="https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-1/" target="documentation"><cite>Module
-								1. Static Web Hosting</cite></a>
-					</footer>
-				</blockquote>
-				<p>
-					No one should register http://<i>your-name</i>.<b>s3-website</b>.<i>your-region</i>.<b>amazonaws.com</b>
-					with Google's search engine. If someone did register that url with
-					Google's search engine, then don't worry, no one would shop there.
-					No one would think that url represents a real business.
-				</p>
-				
+				<hr>
+				<address>
+					Phone:<a href="tel:+12403163101">202-709-9659</a><br> e-mail:<a
+						href="mailto:info@michmerov.consulting">info@michmerov.consulting</a>
+				</address>
 			</section>
 			<section>
-				<h2>How was this site made?</h2>
-				<p>We followed Amazon's documentation, This article will turn
-					into a blow by blow accounting of following those Amazon documents
-					with the intent to give "where's my wallet/purse" confidence to you
-					the reader that cloud sales personnel commonly fail to instill
-					during their pitch.</p>
+				<hr>
+				<form id="contact-form"
+					action="https://0xmvip1fq4.execute-api.us-east-1.amazonaws.com/mc/contact-gcs"
+					method="post">
+					<fieldset>
+						
+						<label>Name:<input type="text" id="name-input" name="name"
+							min="4" required="required" placeholder="Your name here…" />
+						</label> <br /> <label>Phone:<input type="tel" id="phone-input"
+							name="phone" placeholder="Enter a US Phone number"
+							pattern="((\(\d{3}\)?)|(\d{3}))([\s-./]?)(\d{3})([\s-./]?)(\d{4})" />
+						</label> <br /> <label>Email:<input type="email" id="email-input"
+							name="email" placeholder="Enter email here…" />
+						</label> <br /> <label>How can we help you?<br><textarea
+								id="description-input" rows="3" name="desc"
+								placeholder="Enter your message…"></textarea></label> <br><label
+							id="submit-button-label">Submit:
+							<button id="submit-button" type="submit" class="g-recaptcha " data-sitekey="6LftTOwUAAAAAFABz0JirvzjjtW6vwPTojzI1LC3"
+							data-callback="onSubmit" data-action='contact-us'>Submit</button>
+						</label>
+					</fieldset>
+
+				</form>
 
 			</section>
+
 		</article>
 
 	</main>
 	<footer class="page-footer">
-		<p>No servers were harmed in the creation of this website. No cookies were used on this website.</p>
+		<p>No servers were harmed in the creation of this website. No
+			cookies were used on this website.</p>
 	</footer>
 </body>
 </html>
